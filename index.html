@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to My GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .post h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .post .meta {
+            color: #888;
+            font-size: 14px;
+        }
+        .post a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .post a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a simple page hosted on GitHub Pages.</p>
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <p>Sharing thoughts and experiences</p>
+    </header>
+    <main>
+        <!-- Jekyll will replace this with the list of posts -->
+        {% for post in site.posts %}
+        <div class="post">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="meta">Posted on {{ post.date | date: "%B %d, %Y" }}</div>
+            <p>{{ post.excerpt }}</p>
+        </div>
+        {% endfor %}
+    </main>
 </body>
 </html>
