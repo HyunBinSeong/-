@@ -1320,7 +1320,7 @@
 /* Footer */
 #footer {
     background: #f0f0f0;
-    padding: 4em 0 6em 0;
+    padding: 2em 0; /* 필요에 따라 패딩 조정 */
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -1329,10 +1329,6 @@
 }
 
 #footer .icons a {
-    -moz-transition: opacity 0.2s ease-in-out;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    -o-transition: opacity 0.2s ease-in-out;
-    -ms-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     opacity: 0.35;
 }
@@ -1345,7 +1341,7 @@
     color: #999;
     font-size: 0.9em;
     line-height: 1em;
-    margin: 2em 0 0 0;
+    margin: 1em 0 0 0; /* 여백 조정 */
     padding: 0;
     text-align: center;
 }
@@ -1367,6 +1363,7 @@
     margin-left: 0;
     padding-left: 0;
 }
+
 
 /* CTA */
 
